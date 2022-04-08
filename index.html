@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">    
+    <title>Agencia de Marketing | Smart Funnelss</title>
+    <script src="https://kit.fontawesome.com/1aec372780.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $( function(){
+            $(".toogle").on("click", function(){
+                if($(".item").hasClass("active")){
+                    $(".item").removeClass("active");
+                }
+                else{
+                    $(".item").addClass("active");
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <!--Inicia header-->
+    <header>
+        <nav class="navbar-top">
+            <ul class="menu">                
+                <li class="logo"><a href="#"><img src="./assets/logo.png"></a></li>
+                <li class="item button2"><a href="#">Servicios</a></li>
+                <li class="item button2"><a href="#">¿Quiénes somos?</a></li>
+                <li class="item button2"><a href="#">Contacto</a></li>
+                <li class="item button"><a href="#">Acceder</a></li>
+                <li class="toogle"><span class="bars"></span></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Termina header-->
+    <main>
+        
+
+        <!-- Inicia footer-->
+        <footer class="footer">
+            <div class="group-1">
+                <div class="box">
+                    <figure>
+                        <a href="#">
+                            <img src="./assets/logo.png" alt="logo">
+                        </a>
+                    </figure>
+                </div>
+                <div class="box">
+                    <h2>ENLACES</h2>        
+                    <div class="menu">                               
+                    <a href="#" class="menu-item-footer">Servicios</a>
+                    <a href="#" class="menu-item-footer">Contáctanos</a>
+                    <a href="#" class="menu-item-footer">¿Quiénes somos?</a>
+                    <a href="#" class="menu-item-footer">Aviso de Privacidad</a>
+                    </div> 
+                </div>
+                <div class="box">
+                    <h2>SIGUENOS</h2>
+                    <div class="social">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="group-2">
+                <small>&copy; 2022 <b>Josué Valadez</b> - Todos los derechos reservados</small>
+            </div>
+        </footer>
+        <!--Termina footer-->
+    </main>
+</body>
+</html>

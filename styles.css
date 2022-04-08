@@ -1,0 +1,269 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-top{
+    background-color: #151f2a;
+    padding: 5px 20px;    
+}
+
+.navbar-top ul{
+    list-style-type: none;
+}
+
+.navbar-top a{
+    text-decoration: none;
+    color: azure;
+    display: block;
+    
+}
+.navbar-top a:hover{
+    text-decoration: none;    
+}
+
+.logo img{    
+    height: 50px;
+}
+
+.menu li{
+    font-size: 16px;
+    padding: 15px 5px;
+}
+
+.button{
+    border-bottom: #444 solid;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+
+/* footer*/
+.footer{
+    width: 100%;
+    background-color: #151f2a;
+}
+
+.footer .group-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.footer .group-1 .menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 40%;
+}
+
+.footer .group-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .group-1 .box figure img{
+    width: 250px;
+}
+
+.footer .group-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.footer .group-1 .box a{
+    color: #efefef;
+    margin: 0.2rem 0;
+    text-decoration: none;
+}
+
+.footer .group-1 .social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #172d44;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.footer .group-1 .social a:hover{
+    color: #f82707;
+}
+
+.footer .group-1 .menu a:hover{
+    color: #f82707;
+}
+
+.footer .group-2{
+    background-color: #0c1117;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer .group-2 small{
+    font-size: 15px;
+}
+
+/* ----- Menu movil ----- */
+
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toogle{
+    cursor: pointer;
+    order: 1;
+}
+
+.logo{
+    flex: 1;
+}
+
+.item.button{
+    order: 2;
+}
+
+.item{
+    order: 3;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.item.active{
+    display: block;   
+}
+
+.bars{
+    background: #999;
+    display: inline-block;
+    position: relative;
+    height: 2px;
+    width: 18px;
+}
+.bars::before, .bars::after{
+    background: #999;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 2px;
+    width: 18px;
+}
+
+.bars::before{
+    top: 5px;
+}
+
+.bars::after{
+    top: -5px;
+}
+
+
+
+@media screen and (max-width:840px) {
+    .footer .group-1{
+        width: 50%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;        
+    }
+    
+}
+
+
+/* ----- Menu tablet ----- */
+
+@media all and (min-width: 468px){
+    .menu{
+        justify-content: center;        
+    }
+    .logo{
+        flex: 1;
+    }
+    .item.button{
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .toogle{
+        order: 2;
+    }
+    .button{
+        border: 0;
+    }
+    .button a{
+        text-decoration: none;
+        padding: 7px 15px;
+        background-color: #da260a;
+        border: 1px;
+        border-radius: 50em;        
+    }
+    
+    .button a:hover{
+        background-color: #f72504;
+        color: #fff;
+    }
+    
+    .button2 a:hover{
+        text-decoration: none;
+        padding: 7px 15px;
+        background-color: transparent;
+        border-radius: 30px; 
+        border: 2px solid #f82707;
+        transition: .2s;
+    }    
+
+}
+
+@media (max-width: 767px){
+
+}
+
+@media (max-width: 500px){
+}
+/* ----- Menu desktop ----- */
+@media all and (min-width: 768px){
+    .item{
+        display: block;
+        width: auto;
+    }
+    .toogle{
+        display: none;
+    }
+    .logo{
+        order: 0;
+    }
+    .item{
+        order: 1;
+    }
+    .button{
+        order: 2;
+    }
+    .menu li{
+        padding: 15px 10px;
+    }
+    .menu li.button{
+        padding-right: 0;
+    }
+}
