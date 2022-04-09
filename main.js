@@ -3,12 +3,12 @@ document.getElementById("formulario").addEventListener("submit",crear);
 
 //funcion crear cliente
 function crear(e){
-    titulo = document.getElementById("titulo").value
+    nombre = document.getElementById("nombre").value
     email = document.getElementById("email").value
     telefono = document.getElementById("telefono").value
 
     let libro = {
-        titulo,
+        nombre,
         email,
         telefono
     }
@@ -33,26 +33,26 @@ function leer(){
     let libros = JSON.parse(localStorage.getItem("Libros"));
     document.getElementById("tbody").innerHTML = "";
     for(let i=0; i < libros.length; i++){
-        let titulo = libros[i].titulo
+        let nombre = libros[i].nombre
         let email = libros[i].email
         let telefono = libros[i].telefono
 
         document.getElementById("tbody").innerHTML +=
         `<tr>
-            <td>${titulo}</td>
+            <td>${nombre}</td>
             <td>${email}</td>
             <td>${telefono}</td>
-            <td><button onclick="eliminar('${titulo}')" class="btn btn-danger">Eliminar</button></td>
-            <td><button onclick="editar('${titulo}')" class="btn btn-success">Editar</button></td>
+            <td><button onclick="eliminar('${nombre}')" class="btn btn-danger">Eliminar</button></td>
+            <td><button onclick="editar('${nombre}')" class="btn btn-success">Editar</button></td>
         </tr>`
     }
 }
 
 //funcion editar
-function editar(titulo){
+function editar(nombre){
     let libros = JSON.parse(localStorage.getItem("Libros"));
     for(let i=0; i<libros.length; i++){
-        if(libros[i].titulo === titulo){
+        if(libros[i].nombre === nombre){
             document.getElementById("body").innerHTML = `
             <div class="row">
                 <div class="col-md-5">
@@ -63,7 +63,7 @@ function editar(titulo){
                         <div class="card-body">
                             <form>
                                 <div class="form-group mb-3">
-                                    <input type="text" id="newtitulo" class="form-control" placeholder="${libros[i].titulo}">
+                                    <input type="text" id="newnombre" class="form-control" placeholder="${libros[i].nombre}">
                                 </div>
                                 <div class="form-group mb-3">
                                     <input type="email" id="newemail" class="form-control" placeholder="${libros[i].email}">
@@ -83,10 +83,10 @@ function editar(titulo){
 //funcion actualizar
 function actualizar(i){
     let libros = JSON.parse(localStorage.getItem("Libros"));
-    libros[i].titulo = document.getElementById("newtitulo").value;
+    libros[i].nombre = document.getElementById("newnombre").value;
     libros[i].email = document.getElementById("newemail").value;
     libros[i].telefono = document.getElementById("newtelefono").value;
-    if(libros[i].titulo == ""){
+    if(libros[i].nombre == ""){
         alert("No ha ingresado el nombre")
     }else{
         if(libros[i].email == ""){
@@ -106,10 +106,10 @@ function actualizar(i){
 }
 
 //funcion eliminar
-function eliminar(titulo){
+function eliminar(nombre){
     let libros = JSON.parse(localStorage.getItem("Libros"));
     for(let i=0; i<libros.length; i++){
-        if(libros[i].titulo === titulo){
+        if(libros[i].nombre === nombre){
             libros.splice(i,1);
         }
     }
@@ -130,7 +130,7 @@ function vistaPrincipal(){
                         <div class="card-body">
                             <form id="formulario">
                                 <div class="form-group mb-3">
-                                    <input type="text" id="titulo" class="form-control" placeholder="Ingresar nombre">
+                                    <input type="text" id="nombre" class="form-control" placeholder="Ingresar nombre">
                                 </div>
                                 <div class="form-group mb-3">
                                     <input type="email" id="email" class="form-control" placeholder="Ingresar email">
