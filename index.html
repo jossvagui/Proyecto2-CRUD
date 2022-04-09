@@ -38,7 +38,7 @@
     </header>
     <!--Termina header-->
     <main>
-
+    <br>
         <div class="container mt-4" id="body">
             <div class="row">
                 <div class="col-md-5">
@@ -48,14 +48,17 @@
                         </div>
                         <div class="card-body">
                             <form id="formulario">
-                                <div class="form-group">
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Nombre:</label>
                                     <input type="text" id="titulo" class="form-control" placeholder="Ingresar nombre">
                                 </div>
-                                <div class="form-group">
-                                    <textarea id="descripcion" class="form-control" placeholder="Ingresar servicios contratados"></textarea>
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Email:</label>
+                                    <input type="email" id="email" class="form-control" placeholder="Ingresar el email">
                                 </div>
-                                <div class="form-group">
-                                    <input type="number" id="precio" class="form-control" placeholder="Ingresar precio">
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Teléfono:</label>
+                                    <input type="number" id="telefono" class="form-control" placeholder="Ingresar telefono">
                                 </div>
 
                                 <button type="submit" class="btn btn-primary">Agregar</button>
@@ -68,8 +71,8 @@
                         <thead class="table-light">
                           <tr>                              
                               <th scope="col">Nombre</th>
-                              <th scope="col">Descripción</th>
-                              <th scope="col">Precio</th>
+                              <th scope="col">Email</th>
+                              <th scope="col">Teléfono</th>
                           </tr>
                         </thead>
                         <tbody id="tbody">                                               
@@ -78,7 +81,7 @@
                 </div>
             </div>
         </div>
-
+        <br>
         
 
         <!-- Inicia footer-->
