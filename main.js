@@ -42,6 +42,8 @@ function leer(){
             <td>${titulo}</td>
             <td>${descripcion}</td>
             <td>${precio}</td>
+            <td><button onclick="eliminar()" class="btn btn-danger">Eliminar</button></td>
+            <td><button onclick="editar()" class="btn btn-success">Editar</button></td>
         </tr>`
     }
 }
